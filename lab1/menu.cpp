@@ -14,9 +14,9 @@ short int startMenu(Pipeline& my_pipeline, CS& my_cs);
 void Clear();
 void addPipeline(Pipeline& my_pipline);
 void addCS(CS& my_cs);
-void saveFile(const Pipeline& new_pipeline, const CS& new_cs);
+void saveFile(const string fileName, const Pipeline& new_pipeline, const CS& new_cs);
 void showObjects(Pipeline& my_pipeline, CS& my_cs);
-void getFromFile(const string& filename, Pipeline& my_pipeline, CS& my_cs);
+void getFromFile(const string filename, Pipeline& my_pipeline, CS& my_cs);
 void editPipeline(Pipeline& my_pipeline);
 void editCS(CS& my_cs);
 void menu();
@@ -65,7 +65,7 @@ short int startMenu(Pipeline& my_pipeline, CS& my_cs)
 			case 3: showObjects(my_pipeline, my_cs); break;
 			case 4: editPipeline(my_pipeline); break;
 			case 5: editCS(my_cs); break;
-			case 6: saveFile(my_pipeline, my_cs); break;
+			case 6: saveFile("save.txt", my_pipeline, my_cs); break;
 			case 7: getFromFile("load.txt", my_pipeline, my_cs); break;
 			case 0: return 0;
 		}
@@ -236,7 +236,7 @@ void editCS(CS& my_cs)
 	};
 }
 
-void getFromFile(const std::string& filename, Pipeline& my_pipeline, CS& my_cs)
+void getFromFile(const std::string filename, Pipeline& my_pipeline, CS& my_cs)
 {
 	std::ifstream file(filename);
 
@@ -335,20 +335,11 @@ void getFromFile(const std::string& filename, Pipeline& my_pipeline, CS& my_cs)
 }
 
 
-void saveFile(const Pipeline& my_pipeline, const CS& my_cs)
+void saveFile(const std::string fileName, const Pipeline& my_pipeline, const CS& my_cs)
 {
 	if (my_pipeline.kilometer_sign != "" || my_cs.name != "")
 	{
-		cout << "Enter the name of file." << std::endl;
-		std::string fileName;
-		cin >> fileName;
-		Clear();
-
 		std::ofstream out(fileName);
-		if (!(out.is_open())) {
-			cout << "Error: Could not open file" << std::endl;
-			return;
-		}
 
 		if (my_pipeline.kilometer_sign != "default") {
 			out << "@pipeline@" << '\n'

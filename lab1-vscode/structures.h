@@ -52,7 +52,11 @@ struct Pipeline
 
     // Редактирование состояния ремонта трубы
     void toggleRepairStatus() {
-        inRepair = !inRepair;
+        if (length == 0) {
+            std::cout << "There is no pipe" << std::endl;
+        } else {
+            inRepair = !inRepair;
+        }
     }
 };
 
@@ -96,22 +100,32 @@ struct CS {
 
     // Запуск цеха
     void startWorkshop() {
-        if (workingWorkshops < workshops) {
-            workingWorkshops++;
-            std::cout << "One workshop started.\n";
+        if (workshops == 0) {
+            std::cout << "There is no CS" << std::endl;
         } else {
-            std::cout << "All workshops are already working.\n";
+            if (workingWorkshops < workshops) {
+                workingWorkshops++;
+                std::cout << "One workshop started.\n";
+            } else {
+                std::cout << "All workshops are already working.\n";
+            }
         }
+       
     }
 
     // Остановка цеха
     void stopWorkshop() {
-        if (workingWorkshops > 0) {
-            workingWorkshops--;
-            std::cout << "One workshop stopped.\n";
+        if (workshops == 0) {
+            std::cout << "There is no CS" << std::endl;
         } else {
-            std::cout << "No workshops are currently working.\n";
+            if (workingWorkshops > 0) {
+                workingWorkshops--;
+                std::cout << "One workshop stopped.\n";
+            } else {
+                std::cout << "No workshops are currently working.\n";
+            }
         }
+        
     }
 };
 

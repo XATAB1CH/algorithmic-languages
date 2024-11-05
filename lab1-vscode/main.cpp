@@ -71,6 +71,7 @@ void menu() {
             }
             case 4: {
                 Pipeline.toggleRepairStatus();
+                std::cout << "Pipeline changed successfully.\n";
                 break;
             }
             case 5: {
@@ -84,6 +85,7 @@ void menu() {
                 } else {
                     std::cout << "Invalid action.\n";
                 }
+                std::cout << "CS changed successfully.\n";
                 break;
             }
             case 6:

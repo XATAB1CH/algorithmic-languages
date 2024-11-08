@@ -75,16 +75,7 @@ void menu() {
                 break;
             }
             case 5: {
-                int action;
-                std::cout << "1. Start workshop\n2. Stop workshop\n";
-                std::cin >> action;
-                if (action == 1) {
-                    Station.startWorkshop();
-                } else if (action == 2) {
-                    Station.stopWorkshop();
-                } else {
-                    std::cout << "Invalid action.\n";
-                }
+                Station.editWorkingWorkshops();
                 std::cout << "CS changed successfully.\n";
                 break;
             }

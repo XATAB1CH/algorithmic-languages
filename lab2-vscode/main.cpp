@@ -3,8 +3,11 @@
 #include <string>
 #include <vector>
 #include <limits>
+#include <unordered_map>
 
 #include "structures.h"
+#include "pipeline.cpp"
+#include "cs.cpp"
 
 // Очистить консоль 
 void clear() {
@@ -14,16 +17,16 @@ void clear() {
 }
 
 // Сохранить информацию в файл
-void saveToFile(const std::vector<Pipeline>& PipelineArray, const std::vector<CS>& CSArray, const std::string& filename) {
+void saveToFile(std::unordered_map<int, Pipeline>& PipelineMap, std::unordered_map<int, CS>& CSMap, const std::string& filename) {
     std::ofstream file(filename);
     if (file.is_open()) {
-        file << PipelineArray.size() << "\n";
-        for (const auto& Pipeline : PipelineArray) {
-            file << Pipeline.name << " " << Pipeline.length << " " << Pipeline.diameter << " " << Pipeline.inRepair << "\n";
+        file << PipelineMap.size() << "\n";
+        for (const auto& Pipeline : PipelineMap) {
+            file << Pipeline.second.id << " " << Pipeline.second.name << " " << Pipeline.second.length << " " << Pipeline.second.diameter << " " << Pipeline.second.inRepair << "\n";
         }
-        file << CSArray.size() << "\n";
-        for (const auto& station : CSArray) {
-            file << station.name << " " << station.workshops << " " << station.workingWorkshops << " " << station.efficiency << "\n";
+        file << CSMap.size() << "\n";
+        for (const auto& Station : CSMap) {
+            file << Station.second.id << " " << Station.second.name << " " << Station.second.workshops << " " << Station.second.workingWorkshops << " " << Station.second.efficiency << "\n";
         }
         file.close();
         std::cout << "Data saved successfully.\n";
@@ -33,23 +36,23 @@ void saveToFile(const std::vector<Pipeline>& PipelineArray, const std::vector<CS
 }
 
 // Загрузить информацию из файла
-void loadFromFile(std::vector<Pipeline>& PipelineArray, std::vector<CS>& CSArray, const std::string& filename) {
+void loadFromFile(std::unordered_map<int, Pipeline>& PipelineMap, std::unordered_map<int, CS>& CSMap, const std::string& filename) {
     std::ifstream file(filename);
     if (file.is_open()) {
         size_t pipesCount, stationsCount;
         file >> pipesCount;
-        PipelineArray.clear();
+        PipelineMap.clear();
         for (size_t i = 0; i < pipesCount; ++i) {
             Pipeline Pipeline;
-            file >> Pipeline.name >> Pipeline.length >> Pipeline.diameter >> Pipeline.inRepair;
-            PipelineArray.push_back(Pipeline);
+            file >> Pipeline.id >> Pipeline.name >> Pipeline.length >> Pipeline.diameter >> Pipeline.inRepair;
+            PipelineMap.insert(std::make_pair(i, Pipeline));
         }
         file >> stationsCount;
-        CSArray.clear();
+        CSMap.clear();
         for (size_t i = 0; i < stationsCount; ++i) {
-            CS station;
-            file >> station.name >> station.workshops >> station.workingWorkshops >> station.efficiency;
-            CSArray.push_back(station);
+            CS Station;
+            file >> Station.id >> Station.name >> Station.workshops >> Station.workingWorkshops >> Station.efficiency;
+            CSMap.insert(std::make_pair(Station.id, Station));
         }
         file.close();
         std::cout << "Data loaded successfully.\n";
@@ -60,41 +63,36 @@ void loadFromFile(std::vector<Pipeline>& PipelineArray, std::vector<CS>& CSArray
 
 // Главное меню
 void menu() {
-    std::vector<Pipeline> PipelineArray;
-    std::vector<CS> CSArray;
+    std::unordered_map<int, Pipeline> PipelineMap;
+    std::unordered_map<int, CS> CSMap;
     int choice;
 
     while (true) {
-        std::cout << "\n1. Add pipeline\n2. Add CS\n3. View all objects\n4. View filtred objects\n5. Edit Pipeline\n6. Edit CS\n7. Delete pipeline\n8. Delete CS\n9. Save\n10. Load\n11. Pipe batch editing\n0. Exit\n";
+        std::cout << "\n1. Add pipeline\n2. Add CS\n3. View all objects\n4. View filtred objects\n5. Edit Pipeline\n6. Edit CS\n7. Delete pipeline\n8. Delete CS\n9. Pipe batch editing\n10. Save\n11. Load\n0. Exit\n";
         std::cout << "Select an option: ";
         std::cin >> choice;
 
         clear();
         switch (choice) {
             case 1: {
-                Pipeline Pipeline;
-                Pipeline.id = PipelineArray.size();
-                Pipeline.getInfo();
-                PipelineArray.push_back(Pipeline);
+                Pipeline newPipeline = CreatePipeline(PipelineMap);
+                PipelineMap.insert(std::make_pair(newPipeline.id, newPipeline));
                 break;
             }
             case 2: {
-                CS cs;
-                cs.id = CSArray.size();
-                cs.getInfo();
-                CSArray.push_back(cs);
-                clear();
+                CS newCS = CreateCS(CSMap);
+                CSMap.insert(std::make_pair(newCS.id, newCS));
                 break;
             }
             case 3: {
                 std::cout << "Pipelines:\n";
-                for (const auto& Pipeline : PipelineArray) {
-                    Pipeline.showInfo();
+                for (const auto& Pipeline : PipelineMap) {
+                    Pipeline.second.showInfo();
                 }
                 std::cout << "~~~" << std::endl;
                 std::cout << "Compressor Stations:\n";
-                for (const auto& station : CSArray) {
-                    station.showInfo();
+                for (const auto& Station : CSMap) {
+                    Station.second.showInfo();
                 }
                 break;
             }
@@ -117,83 +115,50 @@ void menu() {
                 clear();
 
                 std::cout << "Pipelines:\n";
-                for (const auto& pipeline : PipelineArray) {
-                    if (pipeline.name.find(pipeNameFilter) != std::string::npos && pipeline.inRepair == pipeRepairFilter) {
-                        pipeline.showInfo();
+                for (const auto& pipeline : PipelineMap) {
+                    if (pipeline.second.name.find(pipeNameFilter) != std::string::npos && pipeline.second.inRepair == pipeRepairFilter) {
+                        pipeline.second.showInfo();
                     }
                 }
                 
                 std::cout << "\n~~~\n" << "Compressor staions:" << std::endl;
-
-                for (const auto& station : CSArray) {
-                    unused = 100 - double(double(station.workingWorkshops) / double(station.workshops)) * 100;
-                    if (station.name.find(csNameFilter) != std::string::npos && unused > pipeProcentFilter) {
-                        station.showInfo();
+                for (const auto& station : CSMap) {
+                    unused = 100 - double(double(station.second.workingWorkshops) / double(station.second.workshops)) * 100;
+                    if (station.second.name.find(csNameFilter) != std::string::npos && unused > pipeProcentFilter) {
+                        station.second.showInfo();
                     }
                 }
-            
                 break;
             }
             case 5: {
-                std::cout << "Enter Pipeline index to edit: ";
-                int index;
-                std::cin >> index;
-                if (index >= 0 && index < PipelineArray.size()) {
-                    PipelineArray[index].toggleRepairStatus();
-                } else {
-                    std::cout << "Invalid index.\n";
-                }
+                std::cout << "Enter Pipeline id to edit: ";
+                int id;
+                std::cin >> id;
+                EditPipeline(PipelineMap, id);
                 break;
             }
             case 6: {
                 std::cout << "Enter CS index to edit: ";
                 int index;
                 std::cin >> index;
-                if (index >= 0 && index < CSArray.size()) {
-                    int action;
-                    std::cout << "1. Start workshop\n2. Stop workshop\n";
-                    std::cin >> action;
-                    if (action == 1) {
-                        CSArray[index].startWorkshop();
-                    } else if (action == 2) {
-                        CSArray[index].stopWorkshop();
-                    } else {
-                        std::cout << "Invalid action.\n";
-                    }
-                } else {
-                    std::cout << "Invalid index.\n";
-                }
+                EditCS(CSMap, index);
                 break;
             }
             case 7: {
                 std::cout << "Enter Pipeline index to delete: ";
                 int index;
                 std::cin >> index;
-                if (index >= 0 && index < PipelineArray.size()) {
-                    PipelineArray.erase(PipelineArray.begin() + index);
-                } else {
-                    std::cout << "Invalid index.\n";
-                }
+                DeletePipeline(PipelineMap, index);
                 break;
             }
             case 8: {
                 int index;
                 std::cout << "Enter CS index to delete: ";
                 std::cin >> index;
-                if (index >= 0 && index < CSArray.size()) {
-                    CSArray.erase(CSArray.begin() + index);
-                } else {
-                    std::cout << "Invalid index.\n";
-                }
+                DeleteCS(CSMap, index);
                 break;
             }
             case 9:
-                saveToFile(PipelineArray, CSArray, "data.txt");
-                break;
-            case 10:
-                loadFromFile(PipelineArray, CSArray, "data.txt");
-                break;
-            case 11:
                 int index;
                 int index1, index2;
                 std::cout << "Enter first index of plenty: ";
@@ -209,16 +174,29 @@ void menu() {
                 }
 
                 if (index == 1) {
-                    PipelineArray.erase(PipelineArray.begin() + index1, PipelineArray.begin() + index2 + 1);
+                    for (int i = index1; i <= index2; i++) {
+                        PipelineMap.erase(i);
+                        std::cout << i << " has been deleted." << std::endl;
+                    }
                     std::cout << "Deliting pipes has been done." << std::endl;
                 } else if (index == 0) {
                     for (int i = index1; i <= index2; i++) {
-                        PipelineArray[i].toggleRepairStatus();
+                        PipelineMap[i].toggleRepairStatus();
                     }
                     std::cout << "Repair status has been changed." << std::endl;
                 }
                 break;
-
+            case 10:
+                saveToFile(PipelineMap, CSMap, "data.txt");
+                break;
+            case 11:
+                loadFromFile(PipelineMap, CSMap, "data.txt");
+                break;
+            case 12:
+                for (auto& Pipeline : PipelineMap) {
+                    std::cout << Pipeline.second.id << " " << Pipeline.second.name << " " << Pipeline.second.length << " "<<Pipeline.second.diameter << " " << Pipeline.second.inRepair <<  std::endl;
+                }
+                break;
             case 0:
                 return;
             default:
@@ -231,3 +209,4 @@ int main() {
     menu();
     return 0;
 }
+

@@ -98,34 +98,18 @@ struct CS {
         }
     }
 
-    // Запуск цеха
-    void startWorkshop() {
+    void editWorkingWorkshops() {
         if (workshops == 0) {
             std::cout << "There is no CS" << std::endl;
         } else {
-            if (workingWorkshops < workshops) {
-                workingWorkshops++;
-                std::cout << "One workshop started.\n";
-            } else {
-                std::cout << "All workshops are already working.\n";
+            std::cout << "Enter new number of working workshops: ";
+            while (!(std::cin >> workingWorkshops) || workingWorkshops < 0 || workingWorkshops > workshops) {
+                std::cout << "Invalid input. Please enter a valid integer between 0 and " << workshops << ": ";
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             }
         }
-       
-    }
 
-    // Остановка цеха
-    void stopWorkshop() {
-        if (workshops == 0) {
-            std::cout << "There is no CS" << std::endl;
-        } else {
-            if (workingWorkshops > 0) {
-                workingWorkshops--;
-                std::cout << "One workshop stopped.\n";
-            } else {
-                std::cout << "No workshops are currently working.\n";
-            }
-        }
-        
     }
 };
 

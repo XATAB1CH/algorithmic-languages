@@ -17,43 +17,47 @@ void clear() {
 void saveToFile(Pipeline Pipeline, CS Station, const std::string& filename) {
     std::ofstream file(filename);
     if (file.is_open()) {
-        file << " " << Pipeline.length << " " << Pipeline.diameter << " " << Pipeline.inRepair << "\n";
-        file << " " << Station.workshops << " " << Station.workingWorkshops << " " << Station.efficiency << "\n";
-        file.close();
+        file << Pipeline.name << " " << Pipeline.length << " " << Pipeline.diameter << " " << Pipeline.inRepair << "\n";
+        file << Station.name << " " << Station.workshops << " " << Station.workingWorkshops << " " << Station.efficiency << "\n";
         std::cout << "Data saved successfully.\n";
     } else {
         std::cerr << "Error opening file for saving.\n";
     }
+    file.close();
 }
 
 // Загрузить информацию из файла
 void loadFromFile(Pipeline& Pipeline, CS& Station, const std::string& filename) {
     std::ifstream file(filename);
     if (file.is_open()) {
-        file >> Pipeline.length >> Pipeline.diameter >> Pipeline.inRepair;
-        file >> Station.workshops >> Station.workingWorkshops >> Station.efficiency;
-        file.close();
+        file >> Pipeline.name >> Pipeline.length >> Pipeline.diameter >> Pipeline.inRepair;
+        file >> Station.name >> Station.workshops >> Station.workingWorkshops >> Station.efficiency;
         std::cout << "Data loaded successfully.\n";
     } else {
         std::cerr << "Error opening file for loading.\n";
     }
+    file.close();
 }
 
 // Главное меню
 void menu() {
-    Pipeline Pipeline;
+    Pipeline Pipe;
     CS Station;
     int choice;
 
     while (true) {
         std::cout << "\n1. Add pipeline\n2. Add CS\n3. View all objects\n4. Edit Pipeline\n5. Edit CS\n6. Save\n7. Load\n0. Exit\n";
         std::cout << "Select an option: ";
-        std::cin >> choice;
+        while (!(std::cin >> choice) || choice < 0 || choice > 7 || isdigit(choice) || (std::cin.peek() != '\n')) {
+            std::cout << "Invalid choice. Please try again.\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
 
         clear();
         switch (choice) {
             case 1: {
-                Pipeline.getInfo();
+                Pipe.getInfo();
                 break;
             }
             case 2: {
@@ -63,27 +67,25 @@ void menu() {
             }
             case 3: {
                 std::cout << "Pipelines:\n";
-                Pipeline.showInfo();
+                Pipe.showInfo();
                 std::cout << "~~~" << std::endl;
                 std::cout << "Compressor Stations:\n";
                 Station.showInfo();
                 break;
             }
             case 4: {
-                Pipeline.toggleRepairStatus();
-                std::cout << "Pipeline changed successfully.\n";
+                Pipe.toggleRepairStatus();
                 break;
             }
             case 5: {
                 Station.editWorkingWorkshops();
-                std::cout << "CS changed successfully.\n";
                 break;
             }
             case 6:
-                saveToFile(Pipeline, Station, "data.txt");
+                saveToFile(Pipe, Station, "data.txt");
                 break;
             case 7:
-                loadFromFile(Pipeline, Station, "data.txt");
+                loadFromFile(Pipe, Station, "data.txt");
                 break;
             case 0:
                 return;

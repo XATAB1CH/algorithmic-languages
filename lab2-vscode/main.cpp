@@ -16,6 +16,23 @@ void clear() {
     #endif
 }
 
+// Функция логирования строки
+void log(const std::string str) {
+    std::ofstream logFile("log.txt", std::ios_base::app);
+    if (logFile.is_open()) {
+        logFile << str << "\n";
+        logFile.close();
+    }
+}
+
+void logStruct(Pipeline pipe) {
+    std::ofstream logFile("log.txt", std::ios_base::app);
+    if (logFile.is_open()) {
+        logFile << pipe << "\n";
+        logFile.close();
+    }
+}
+
 // Сохранить информацию в файл
 void saveToFile(std::unordered_map<int, Pipeline>& PipelineMap, std::unordered_map<int, CS>& CSMap, const std::string& filename) {
     std::ofstream file(filename);
@@ -76,6 +93,8 @@ void menu() {
         switch (choice) {
             case 1: {
                 Pipeline newPipeline = CreatePipeline(PipelineMap);
+                log("Создал новую трубу");
+                logStruct(newPipeline);
                 PipelineMap.insert(std::make_pair(newPipeline.id, newPipeline));
                 break;
             }

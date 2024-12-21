@@ -1,6 +1,588 @@
-Создал новую трубу
-Создал новую трубу
-Создал новую трубу
-Создал новую трубу
-Создал новую трубу
-Создал новую трубу
+[02.12.24 14:52:58] Created new pipeline:
+>>>
+pipe
+12.000000
+100.000000
+1
+>>>
+[02.12.24 14:52:59] Viewed all objects.
+[02.12.24 14:53:23] Created new CS:
+>>>
+weqPipe
+1
+1
+44
+>>>
+[02.12.24 14:53:23] Viewed all objects.
+[02.12.24 14:54:04] Created new pipeline:
+>>>
+pipe2
+123.000000
+11.000000
+0
+>>>
+[02.12.24 14:54:05] Viewed all objects.
+[02.12.24 14:54:16] Created new pipeline:
+>>>
+pipe3
+12414.000000
+2.000000
+1
+>>>
+[02.12.24 14:54:16] Viewed all objects.
+[02.12.24 14:54:31] Created new pipeline:
+>>>
+pipe4
+111.000000
+2.000000
+1
+>>>
+[02.12.24 14:54:31] Viewed all objects.
+[02.12.24 14:54:38] Created new CS:
+>>>
+cs1
+2131
+1
+1
+>>>
+[02.12.24 14:54:43] Created new CS:
+>>>
+afaf
+23
+22
+3
+>>>
+[02.12.24 14:54:44] Viewed all objects.
+[02.12.24 14:54:51] Created new CS:
+>>>
+afaf
+2114
+2
+3
+>>>
+[02.12.24 14:54:52] Viewed all objects.
+[02.12.24 14:55:00] Data saved successfully.
+[02.12.24 14:55:01] Viewed all objects.
+[02.12.24 14:55:04] Data loaded successfully.
+[02.12.24 14:55:05] Viewed all objects.
+[02.12.24 14:55:43] Edited pipeline.
+[02.12.24 14:55:45] Viewed all objects.
+[02.12.24 14:55:59] Edited pipeline.
+[02.12.24 14:56:00] Viewed all objects.
+[02.12.24 14:56:05] Edited pipeline.
+[02.12.24 14:56:05] Viewed all objects.
+[02.12.24 14:56:20] Viewed all objects.
+[02.12.24 14:56:30] Exiting program.
+
+[02.12.24 14:56:32] Viewed all objects.
+[02.12.24 14:56:34] Data loaded successfully.
+[02.12.24 14:56:35] Viewed all objects.
+[02.12.24 14:57:02] Data loaded successfully.
+[02.12.24 14:57:03] Viewed all objects.
+[02.12.24 14:57:25] Viewed filtered objects.
+[02.12.24 14:57:26] Viewed all objects.
+[02.12.24 14:57:52] Edited pipeline.
+[02.12.24 14:57:53] Viewed all objects.
+[02.12.24 14:57:58] Edited pipeline.
+[02.12.24 14:57:58] Viewed all objects.
+[02.12.24 14:58:04] Edited pipeline.
+[02.12.24 14:58:05] Viewed all objects.
+[02.12.24 14:58:15] Edited pipeline.
+[02.12.24 14:58:15] Viewed all objects.
+[02.12.24 14:58:39] Edited CS.
+[02.12.24 14:58:39] Viewed all objects.
+[02.12.24 14:58:45] Edited CS.
+[02.12.24 14:58:51] Edited CS.
+[02.12.24 14:58:59] Edited CS.
+[02.12.24 14:58:59] Viewed all objects.
+[02.12.24 14:59:46] Deleted plenty.
+[02.12.24 14:59:52] Viewed all objects.
+[02.12.24 15:02:21] Viewed all objects.
+[02.12.24 15:02:24] Data loaded successfully.
+[02.12.24 15:02:24] Viewed all objects.
+[02.12.24 15:03:34] Edited pipeline.
+[02.12.24 15:03:38] Viewed all objects.
+[02.12.24 15:04:00] Edited CS.
+[02.12.24 15:04:00] Viewed all objects.
+[02.12.24 15:04:11] Edited CS.
+[02.12.24 15:04:11] Viewed all objects.
+[02.12.24 15:07:06] Data loaded successfully.
+[02.12.24 15:07:07] Viewed all objects.
+[02.12.24 15:07:20] Deleted pipeline.
+[02.12.24 15:07:21] Viewed all objects.
+[02.12.24 15:07:32] Deleted CS.
+[02.12.24 15:07:33] Viewed all objects.
+[02.12.24 15:08:00] Viewed all objects.
+[02.12.24 15:08:15] Deleted pipeline.
+[02.12.24 15:08:15] Viewed all objects.
+[02.12.24 15:08:28] Deleted pipeline.
+[02.12.24 15:08:28] Viewed all objects.
+[02.12.24 15:08:35] Deleted pipeline.
+[02.12.24 15:08:37] Viewed all objects.
+[02.12.24 15:08:42] Deleted pipeline.
+[02.12.24 15:08:43] Viewed all objects.
+[02.12.24 15:08:52] Deleted pipeline.
+[02.12.24 15:08:53] Viewed all objects.
+[02.12.24 15:08:59] Deleted pipeline.
+[02.12.24 15:08:59] Viewed all objects.
+[02.12.24 15:09:09] Deleted CS.
+[02.12.24 15:09:09] Viewed all objects.
+[02.12.24 15:09:14] Deleted CS.
+[02.12.24 15:09:15] Viewed all objects.
+[02.12.24 15:09:21] Deleted CS.
+[02.12.24 15:09:22] Viewed all objects.
+[02.12.24 15:09:25] Deleted CS.
+[02.12.24 15:09:25] Viewed all objects.
+[02.12.24 15:09:30] Deleted CS.
+[02.12.24 15:09:30] Viewed all objects.
+[02.12.24 15:11:19] Data loaded successfully.
+[02.12.24 15:11:19] Viewed all objects.
+[02.12.24 15:11:26] Edited pipeline.
+[02.12.24 15:11:26] Viewed all objects.
+[02.12.24 15:11:41] Edited pipeline.
+[02.12.24 15:11:42] Viewed all objects.
+[02.12.24 15:11:52] Viewed all objects.
+[02.12.24 15:11:55] Viewed all objects.
+[02.12.24 15:11:58] Edited pipeline.
+[02.12.24 15:11:59] Viewed all objects.
+[02.12.24 15:14:56] Viewed all objects.
+[02.12.24 15:14:58] Data loaded successfully.
+[02.12.24 15:14:58] Viewed all objects.
+[02.12.24 15:15:03] Edited pipeline.
+[02.12.24 15:15:06] Viewed all objects.
+[02.12.24 15:15:17] Edited pipeline.
+[02.12.24 15:15:32] Viewed all objects.
+[02.12.24 15:17:09] Viewed all objects.
+[02.12.24 15:17:10] Data loaded successfully.
+[02.12.24 15:17:10] Viewed all objects.
+[02.12.24 15:17:13] Edited pipeline.
+[02.12.24 15:17:16] Viewed all objects.
+[02.12.24 15:17:24] Data loaded successfully.
+[02.12.24 15:17:24] Viewed all objects.
+[02.12.24 15:17:56] Edited CS.
+[02.12.24 15:17:57] Viewed all objects.
+[02.12.24 15:19:55] Data loaded successfully.
+[02.12.24 15:19:55] Viewed all objects.
+[02.12.24 15:20:05] Edited pipeline.
+[02.12.24 15:20:05] Viewed all objects.
+[02.12.24 15:20:15] Edited CS.
+[02.12.24 15:20:15] Viewed all objects.
+[02.12.24 15:20:34] Viewed filtered objects.
+[02.12.24 15:20:35] Viewed all objects.
+[02.12.24 15:21:00] Viewed filtered objects.
+[02.12.24 15:21:19] Viewed all objects.
+[02.12.24 15:21:36] Viewed filtered objects.
+[02.12.24 16:14:50] Viewed all objects.
+[02.12.24 16:14:53] Data loaded successfully.
+[02.12.24 16:14:53] Viewed all objects.
+[02.12.24 16:16:21] Viewed all objects.
+[02.12.24 16:16:22] Data loaded successfully.
+[02.12.24 16:16:22] Viewed all objects.
+[02.12.24 16:16:43] Viewed all objects.
+[02.12.24 16:17:02] Data loaded successfully.
+[02.12.24 16:17:40] Viewed all objects.
+[02.12.24 16:18:56] Viewed all objects.
+[02.12.24 16:18:58] Data loaded successfully.
+[02.12.24 16:18:58] Viewed all objects.
+[02.12.24 16:19:28] Deleted plenty.
+[02.12.24 16:19:28] Viewed all objects.
+[02.12.24 16:19:36] Deleted plenty.
+[02.12.24 16:19:38] Viewed all objects.
+[02.12.24 16:19:51] Deleted plenty.
+[02.12.24 16:19:51] Viewed all objects.
+[02.12.24 16:28:52] Viewed all objects.
+[02.12.24 16:28:54] Data loaded successfully.
+[02.12.24 16:28:54] Viewed all objects.
+[02.12.24 16:29:07] Deleted plenty.
+[02.12.24 16:29:08] Viewed all objects.
+[02.12.24 16:29:23] Data loaded successfully.
+[02.12.24 16:29:23] Viewed all objects.
+[02.12.24 16:29:42] Deleted pipeline.
+[02.12.24 16:29:43] Viewed all objects.
+[02.12.24 16:30:02] Deleted pipeline.
+[02.12.24 16:30:03] Viewed all objects.
+[02.12.24 16:30:05] Viewed all objects.
+[02.12.24 16:30:06] Viewed all objects.
+[02.12.24 16:30:08] Viewed all objects.
+[02.12.24 16:30:16] Deleted pipeline.
+[02.12.24 16:30:17] Viewed all objects.
+[02.12.24 16:30:23] Deleted CS.
+[02.12.24 16:30:23] Viewed all objects.
+[02.12.24 16:30:34] Edited pipeline.
+[02.12.24 16:30:35] Viewed all objects.
+[02.12.24 16:30:38] Edited pipeline.
+[02.12.24 16:30:39] Viewed all objects.
+[02.12.24 16:31:36] Data loaded successfully.
+[02.12.24 16:31:36] Viewed all objects.
+[02.12.24 16:31:41] Deleted pipeline.
+[02.12.24 16:31:42] Viewed all objects.
+[02.12.24 16:32:01] Viewed all objects.
+[02.12.24 16:32:02] Data loaded successfully.
+[02.12.24 16:32:02] Viewed all objects.
+[02.12.24 16:32:07] Deleted pipeline.
+[02.12.24 16:32:08] Viewed all objects.
+[02.12.24 16:34:21] Data loaded successfully.
+[02.12.24 16:34:21] Viewed all objects.
+[02.12.24 16:34:26] Deleted pipeline.
+[02.12.24 16:34:27] Viewed all objects.
+[02.12.24 16:35:57] Data loaded successfully.
+[02.12.24 16:35:57] Viewed all objects.
+[02.12.24 16:35:59] Deleted pipeline.
+[02.12.24 16:35:59] Viewed all objects.
+[02.12.24 16:37:12] Data loaded successfully.
+[02.12.24 16:37:13] Deleted pipeline.
+[02.12.24 16:37:13] Viewed all objects.
+[02.12.24 16:37:25] Deleted pipeline.
+[02.12.24 16:37:27] Viewed all objects.
+[02.12.24 16:37:37] Deleted pipeline.
+[02.12.24 16:37:38] Viewed all objects.
+[02.12.24 16:43:36] Viewed all objects.
+[02.12.24 16:43:38] Data loaded successfully.
+[02.12.24 16:43:39] Viewed all objects.
+[02.12.24 16:43:55] Deleted pipeline.
+[02.12.24 16:43:55] Viewed all objects.
+[02.12.24 16:44:02] Deleted pipeline.
+[02.12.24 16:44:03] Viewed all objects.
+[02.12.24 16:44:10] Deleted pipeline.
+[02.12.24 16:44:11] Viewed all objects.
+[02.12.24 16:44:21] Deleted pipeline.
+[02.12.24 16:44:21] Viewed all objects.
+[02.12.24 16:45:18] Data loaded successfully.
+[02.12.24 16:45:19] Viewed all objects.
+[02.12.24 16:45:38] Viewed all objects.
+[02.12.24 16:45:39] Data loaded successfully.
+[02.12.24 16:45:39] Viewed all objects.
+[02.12.24 16:45:44] Deleted pipeline.
+[02.12.24 16:45:44] Viewed all objects.
+[02.12.24 16:45:48] Viewed all objects.
+[02.12.24 16:45:51] Deleted pipeline.
+[02.12.24 16:45:51] Viewed all objects.
+[02.12.24 16:46:17] Deleted plenty.
+[02.12.24 16:46:17] Viewed all objects.
+[02.12.24 16:46:25] Deleted plenty.
+[02.12.24 16:46:26] Viewed all objects.
+[02.12.24 16:46:41] Deleted plenty.
+[02.12.24 16:46:45] Viewed all objects.
+[02.12.24 16:47:39] Viewed all objects.
+[02.12.24 16:47:40] Data loaded successfully.
+[02.12.24 16:47:40] Viewed all objects.
+[02.12.24 16:48:08] Deleted plenty.
+[02.12.24 16:48:10] Viewed all objects.
+[02.12.24 16:48:17] Deleted plenty.
+[02.12.24 16:48:17] Viewed all objects.
+[02.12.24 16:48:27] Deleted plenty.
+[02.12.24 16:48:28] Viewed all objects.
+[02.12.24 16:48:41] Deleted plenty.
+[02.12.24 16:48:44] Viewed all objects.
+[02.12.24 16:49:09] Deleted plenty.
+[02.12.24 16:49:10] Viewed all objects.
+[02.12.24 16:52:23] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[02.12.24 16:52:25] Created new pipeline:
+>>>
+2
+2.000000
+2.000000
+1
+>>>
+[02.12.24 16:52:28] Created new pipeline:
+>>>
+3
+3.000000
+3.000000
+1
+>>>
+[02.12.24 16:52:29] Viewed all objects.
+[02.12.24 16:52:38] Deleted plenty.
+[02.12.24 16:52:39] Viewed all objects.
+[02.12.24 16:53:22] Data loaded successfully.
+[02.12.24 16:53:22] Viewed all objects.
+[02.12.24 16:53:32] Deleted plenty.
+[02.12.24 16:53:33] Viewed all objects.
+[02.12.24 16:53:38] Deleted plenty.
+[02.12.24 16:53:39] Viewed all objects.
+[02.12.24 16:57:06] Created new CS:
+>>>
+1
+1
+1
+1
+>>>
+[02.12.24 16:57:07] Viewed all objects.
+[02.12.24 16:57:08] Data loaded successfully.
+[02.12.24 16:57:09] Viewed all objects.
+[02.12.24 16:57:17] Deleted plenty.
+[02.12.24 16:57:17] Viewed all objects.
+[02.12.24 16:57:43] Edited CS.
+[02.12.24 16:57:45] Viewed all objects.
+[02.12.24 16:58:10] Deleted plenty.
+[02.12.24 16:59:50] Deleted plenty.
+[02.12.24 16:59:51] Viewed all objects.
+[02.12.24 17:07:06] Data loaded successfully.
+[02.12.24 17:07:09] Viewed all objects.
+[02.12.24 17:07:19] Deleted pipeline.
+[02.12.24 17:07:22] Viewed all objects.
+[02.12.24 17:07:32] Created new pipeline:
+>>>
+pipe1
+1000.000000
+200.000000
+0
+>>>
+[02.12.24 17:07:33] Viewed all objects.
+[02.12.24 17:14:32] Data loaded successfully.
+[02.12.24 17:14:32] Viewed all objects.
+[02.12.24 17:14:37] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[02.12.24 17:14:37] Viewed all objects.
+[02.12.24 17:15:04] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[02.12.24 17:15:04] Viewed all objects.
+[02.12.24 17:15:08] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[02.12.24 17:15:09] Viewed all objects.
+[02.12.24 17:15:15] Deleted pipeline.
+[02.12.24 17:15:16] Viewed all objects.
+[02.12.24 17:15:19] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[02.12.24 17:15:20] Viewed all objects.
+[02.12.24 17:17:23] Deleted plenty.
+[02.12.24 17:17:29] Viewed all objects.
+[02.12.24 17:17:34] Data loaded successfully.
+[02.12.24 17:17:34] Viewed all objects.
+[02.12.24 17:17:52] Deleted plenty.
+[02.12.24 17:17:53] Viewed all objects.
+[02.12.24 17:18:10] Deleted plenty.
+[02.12.24 17:18:11] Viewed all objects.
+[03.12.24 00:30:11] Data loaded successfully.
+[03.12.24 00:30:12] Viewed all objects.
+[03.12.24 10:31:30] Created new pipeline:
+>>>
+pipe1
+123.000000
+1234.000000
+1
+>>>
+[03.12.24 10:33:19] Data loaded successfully.
+[03.12.24 10:33:20] Viewed all objects.
+[03.12.24 10:33:22] Data saved successfully.
+[03.12.24 10:33:22] Viewed all objects.
+[03.12.24 10:37:02] Data loaded successfully.
+[03.12.24 10:37:02] Viewed all objects.
+[03.12.24 10:37:08] Created new pipeline:
+>>>
+po
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:37:08] Viewed all objects.
+[03.12.24 10:37:16] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:37:17] Viewed all objects.
+[03.12.24 10:37:19] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:37:19] Viewed all objects.
+[03.12.24 10:37:22] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:37:22] Viewed all objects.
+[03.12.24 10:37:25] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:37:26] Viewed all objects.
+[03.12.24 10:38:26] Viewed all objects.
+[03.12.24 10:38:28] Data loaded successfully.
+[03.12.24 10:38:28] Viewed all objects.
+[03.12.24 10:38:30] Data loaded successfully.
+[03.12.24 10:39:48] Viewed all objects.
+[03.12.24 10:40:00] Data loaded successfully.
+[03.12.24 10:40:03] Viewed all objects.
+[03.12.24 10:40:12] Data loaded successfully.
+[03.12.24 10:40:13] Data saved successfully.
+[03.12.24 10:40:49] Data loaded successfully.
+[03.12.24 10:40:50] Viewed all objects.
+[03.12.24 10:40:59] Viewed all objects.
+[03.12.24 10:41:51] Data loaded successfully.
+[03.12.24 10:41:51] Viewed all objects.
+[03.12.24 10:41:55] Data loaded successfully.
+[03.12.24 10:41:59] Data saved successfully.
+[03.12.24 10:41:59] Viewed all objects.
+[03.12.24 10:42:34] Data loaded successfully.
+[03.12.24 10:42:36] Viewed all objects.
+[03.12.24 10:42:41] Data loaded successfully.
+[03.12.24 10:42:46] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:42:47] Viewed all objects.
+[03.12.24 10:42:53] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:42:54] Viewed all objects.
+[03.12.24 10:44:05] Data loaded successfully.
+[03.12.24 10:44:06] Viewed all objects.
+[03.12.24 10:44:11] Data saved successfully.
+[03.12.24 10:45:52] Data loaded successfully.
+[03.12.24 10:45:53] Viewed all objects.
+[03.12.24 10:45:55] Data saved successfully.
+[03.12.24 10:46:00] Data loaded successfully.
+[03.12.24 10:46:03] Viewed all objects.
+[03.12.24 10:46:07] Created new pipeline:
+>>>
+pipo
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:46:08] Viewed all objects.
+[03.12.24 10:46:15] Created new pipeline:
+>>>
+po1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:46:16] Viewed all objects.
+[03.12.24 10:47:08] Data loaded successfully.
+[03.12.24 10:47:10] Viewed all objects.
+[03.12.24 10:47:16] Data saved successfully.
+[03.12.24 10:47:23] Data loaded successfully.
+[03.12.24 10:50:43] Data loaded successfully.
+[03.12.24 10:50:46] Viewed all objects.
+[03.12.24 10:50:47] Data loaded successfully.
+[03.12.24 10:50:52] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:50:52] Viewed all objects.
+[03.12.24 10:50:57] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:50:58] Viewed all objects.
+[03.12.24 10:51:03] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:51:05] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:51:05] Viewed all objects.
+[03.12.24 10:51:08] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:51:08] Viewed all objects.
+[03.12.24 10:52:30] Data loaded successfully.
+[03.12.24 10:52:30] Viewed all objects.
+[03.12.24 10:52:34] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:52:34] Viewed all objects.
+[03.12.24 10:52:38] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:52:40] Viewed all objects.
+[03.12.24 10:53:18] Data loaded successfully.
+[03.12.24 10:53:18] Viewed all objects.
+[03.12.24 10:53:21] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:53:21] Viewed all objects.
+[03.12.24 10:53:30] Created new pipeline:
+>>>
+5
+2.000000
+1.000000
+1
+>>>
+[03.12.24 10:53:30] Viewed all objects.
+[03.12.24 10:53:41] Deleted pipeline.
+[03.12.24 10:53:42] Viewed all objects.
+[03.12.24 10:53:46] Created new pipeline:
+>>>
+1
+1.000000
+1.000000
+1
+>>>
+[03.12.24 10:53:46] Viewed all objects.

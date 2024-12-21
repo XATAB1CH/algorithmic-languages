@@ -22,5 +22,11 @@ bin/
 !*/bin/*.exe
 
 # Ignore all .vscode directories
-lab1-vscode/.vscode
-lab2-vscode/.vscode
+*.vscode
+*.vs
+
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+
+*Debug

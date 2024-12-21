@@ -8,6 +8,18 @@
 #include <limits>
 #include <string>
 
+std::ostream& operator << (std::ostream& out, const Pipeline& pipe)
+{
+    out << "\nID: " << pipe.id
+        << "\nPipe name: " << pipe.name
+        << "\nPipe length: " << pipe.length
+        << "\nPipe diameter: " << pipe.diameter
+        << "\nThe pipe attribute: " << pipe.inRepair << std::endl;
+    return out;
+};
+
+
+
 struct Pipeline
 {
     int id;
@@ -17,10 +29,12 @@ struct Pipeline
     bool inRepair;
 
     // Вывод данных трубы
-    void showInfo() const {
-        std::cout << "Index: " << id << ", Pipe: " << name << ", Length: " << length 
-                  << ", Diameter: " << diameter 
-                  << ", In repair: " << (inRepair ? "Yes" : "No") << "\n";
+    void showInfo(std::ostream& os = std::cout) const {
+        os << "Pipeline ID: " << id << "\n"
+           << "Name: " << name << "\n"
+           << "Length: " << length << " km\n"
+           << "Diameter: " << diameter << " m\n"
+           << "In Repair: " << (inRepair ? "Yes" : "No") << "\n";
     }
 
     // Редактирование состояния ремонта трубы
@@ -28,6 +42,8 @@ struct Pipeline
         inRepair = !inRepair;
     }
 };
+
+
 
 struct CS {
     int id;
